@@ -21,11 +21,11 @@ class bidict(dict):
         if self[key] in self.inverse and not self.inverse[self[key]]: 
             del self.inverse[self[key]]
         super(bidict, self).__delitem__(key)
-
+# End of stolen code
 
 substitution_cipher = bidict({"A": "Q", "B": "W", "C": "E", "D": "R", "E": "T", "F": "Y", "G": "U", "H": "I", "I": "O", "J": "P",
                                "K": "A", "L": "S", "M": "D", "N": "F", "O": "G", "P": "H", "Q": "J", "R": "K", "S": "L", "T": "Z", "U": "X", "V": "C", "W": "V",
-                               "X": "B", "Y": "N", "Z": "M",})
+                               "X": "B", "Y": "N", "Z": "M",}) # Values can be changed to any other letter, but must be unique
 
 while True:
     choice = input("Would you like to encrypt or decrypt a message? (E/D): ").upper()
